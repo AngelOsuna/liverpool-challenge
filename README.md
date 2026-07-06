@@ -1,5 +1,5 @@
 # Liverpool E2E Automation Challenge
-[![Playwright Tests](https://github.com/AngelOsuna/liverpool-challenge/actions/workflows/playwright.yml/badge.svg)](https://github.com/AngelOsuna/liverpool-challenge/actions/workflows/test.yml)
+[![Playwright Tests](https://github.com/AngelOsuna/liverpool-challenge/actions/workflows/playwright.yml/badge.svg?branch=main)](https://github.com/AngelOsuna/liverpool-challenge/actions/workflows/playwright.yml)
 
 ## Setup Instructions
 1. Clone this repository.
