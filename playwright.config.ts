@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { defineConfig, devices } from '@playwright/test';
 
 /**
@@ -26,8 +27,8 @@ export default defineConfig({
       name: 'chromium',
       use: { 
         ...devices['Desktop Chrome'],
-        // Tell Playwright to use your actual installed Chrome browser
-        channel: 'chrome', 
+        // Use local Chrome for dev, but use default Chromium in GitHub Actions
+        channel: process.env.CI ? undefined : 'chrome', 
         userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
       },
     },

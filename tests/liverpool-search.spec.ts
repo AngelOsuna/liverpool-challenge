@@ -99,14 +99,15 @@ test('Liverpool E2E: Search, Filter, and API Validation', async ({ page }) => {
     const cleanUiName = uiProduct.name.toLowerCase();
     
     // Advanced Fuzzy Matching: Check if the UI name contains at least 70% of the API name's words
+    // Advanced Fuzzy Matching: Check if the UI name contains at least 70% of the API name's words
     const isMatch = apiProducts.some((apiProduct: any) => {
-       const apiWords = apiProduct.name.toLowerCase().split(' ').filter(word => word.length > 2);
+       const apiWords = apiProduct.name.toLowerCase().split(' ').filter((word: string) => word.length > 2);
        if (apiWords.length === 0) return false;
        
-       const matchedWords = apiWords.filter(word => cleanUiName.includes(word));
+       const matchedWords = apiWords.filter((word: string) => cleanUiName.includes(word));
        const matchPercentage = matchedWords.length / apiWords.length;
        
-       return matchPercentage >= 0.7; // If 70% of the API words are in the UI title, it's a match!
+       return matchPercentage >= 0.7; 
     });
 
     if (isMatch) {
