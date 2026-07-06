@@ -20,3 +20,5 @@ The GitHub Actions CI pipeline is fully configured, operational, and executes on
 However, because GitHub runners use public Microsoft Azure Datacenter IPs, Liverpool's Akamai WAF (Web Application Firewall) actively blocks the headless browser at the edge layer, resulting in an "Acnpx playwright test tests/liverpool-search.spec.ts --headedcess Denied" timeout during Step 2. 
 
 The test suite executes flawlessly with a 100% pass rate when run locally on a residential IP. I have documented how a QA team handles this exact infrastructure limitation in my `TEST_STRATEGY.md` (e.g., IP whitelisting or testing against lower staging environments).
+
+[![Playwright Tests](https://github.com/AngelOsuna/liverpool-challenge/actions/workflows/playwright.yml/badge.svg)](https://github.com/AngelOsuna/liverpool-challenge/actions/workflows/playwright.yml)
